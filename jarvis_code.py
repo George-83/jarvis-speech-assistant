@@ -17,7 +17,7 @@ talk("Hello sir, how can I help you?")
 def command():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        r.pause_threshold = 0.2
+        r.pause_threshold = 1
         r.adjust_for_ambient_noise(source, duration=1)
         audio = r.listen(source)
 
