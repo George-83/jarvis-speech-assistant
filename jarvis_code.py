@@ -17,12 +17,12 @@ talk("Hello sir, how can I help you?")
 def command():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        r.pause_threshold = 0.5
+        r.pause_threshold = 0.2
         r.adjust_for_ambient_noise(source, duration=1)
         audio = r.listen(source)
 
     try:
-        my_command = r.recognize_google(audio).lower()
+        my_command = r.recognize_google(audio, language="en-GB").lower()
         print("You said: " + my_command + "\n")
     except sr.UnknownValueError:
         talk("Sorry, I did not understand you")
