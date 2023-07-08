@@ -11,4 +11,4 @@ def talk(words):
     engine.runAndWait()
 
 
-talk("Hello ser, how can I help you?")
+talk("Hello sir, how can I help you?")
