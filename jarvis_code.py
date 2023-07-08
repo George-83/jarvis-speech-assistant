@@ -22,6 +22,8 @@ def command():
         audio = r.listen(source)
 
     try:
+        # Here you can change language, for example "language=ru-RU"
+        # But in this case, also, you should change keywords for commands
         my_command = r.recognize_google(audio, language="en-GB").lower()
         print("You said: " + my_command + "\n")
     except sr.UnknownValueError:
@@ -31,6 +33,8 @@ def command():
     return my_command
 
 
+# This function defines commands and keywords
+# You can change them depending on your needs
 def do_something(my_command):
     if "open moscow times" in my_command:
         URL = "https://www.moscowtimes.ru/news"
