@@ -23,7 +23,7 @@ def command():
 
     try:
         # Here you can change language, for example "language=ru-RU"
-        # But in this case, also, you should change keywords for commands
+        # But in this case, also, you should change language for keywords in commands
         my_command = r.recognize_google(audio, language="en-GB").lower()
         print("You said: " + my_command + "\n")
     except sr.UnknownValueError:
